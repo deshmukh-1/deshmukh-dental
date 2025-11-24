@@ -63,6 +63,14 @@
 
   </style>
 </head>
+<script>
+function bookOnWhatsApp() {
+  const phone = "918888690910"; // doctor phone in international format
+  const msg = encodeURIComponent("Hello Doctor, I would like to book an appointment.");
+  window.open(`https://wa.me/${phone}?text=${msg}`, "_blank");
+}
+</script>
+
 <body>
   <header>
     <div class="container">
@@ -226,7 +234,8 @@
               <option>Emergency Care</option>
             </select>
             <textarea name="notes" rows="3" placeholder="Notes / preferred date"></textarea>
-            <button class="btn" type="submit">Request Appointment</button>
+            <a class="cta" href="javascript:void(0)" onclick="bookOnWhatsApp()">Book Appointment</a>
+	
           </form>
         </div>
       </div>
